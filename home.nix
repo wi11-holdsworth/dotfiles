@@ -7,6 +7,7 @@
         stateVersion = "24.05";
         packages = with pkgs; [
             bash
+            direnv
             git
             starship
         ];
@@ -32,12 +33,16 @@
                 gp = "git push";
                 gacp = "ga && gc && gp";
                 dots = "cd ~/.dotfiles && clear && ls -T && echo";
-                editcf = "vi ~/.dotfiles/hosts/$HOSTNAME/configuration.nix";
-                edithm = "vi ~/.dotfiles/hosts/$HOSTNAME/home.nix";
+                editcf = "vi ~/.dotfiles/configuration.nix";
+                edithm = "vi ~/.dotfiles/home.nix";
                 getflakey = ''nix flake new -t github:nix-community/nix-direnv . 
                                 && echo "use flake" >> .envrc 
                                 && direnv allow'';
                 };
+        };
+
+        direnv = {
+            enable = true;
         };
         
         git = {

@@ -5,13 +5,13 @@
     environment.systemPackages = with pkgs; [
         bat
         delta
-        direnv
         dust
         eza
         github-cli
         gping
         home-manager
         nh
+	nodejs
         vim
         wget
         zellij
