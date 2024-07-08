@@ -41,7 +41,7 @@
         git = {
             enable = true;
             userName = "wi11-holdsworth";
-            userEmail = "qyp4l7a5@duck.com";
+            userEmail = "83637728+wi11-holdsworth@users.noreply.github.com";
             extraConfig.init.defaultBranch = "main";
             delta.enable = true;
         };
