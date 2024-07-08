@@ -5,6 +5,7 @@
     environment.systemPackages = with pkgs; [
         bat
         delta
+        direnv
         dust
         eza
         github-cli

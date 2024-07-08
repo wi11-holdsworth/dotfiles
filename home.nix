@@ -34,8 +34,10 @@
                 dots = "cd ~/.dotfiles && clear && ls -T && echo";
                 editcf = "vi ~/.dotfiles/hosts/$HOSTNAME/configuration.nix";
                 edithm = "vi ~/.dotfiles/hosts/$HOSTNAME/home.nix";
-                getflakey = ''nix flake new -t github:nix-community/nix-direnv . && echo "use flake" >> .envrc && direnv allow'';
-            };
+                getflakey = ''nix flake new -t github:nix-community/nix-direnv . 
+                                && echo "use flake" >> .envrc 
+                                && direnv allow'';
+                };
         };
         
         git = {
