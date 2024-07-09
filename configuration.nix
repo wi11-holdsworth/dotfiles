@@ -32,8 +32,18 @@
 	relativenumber = true;
       };
       colorschemes.ayu.enable = true;
-      extraConfigVim = ''
-      '';
+      plugins = {
+	lsp = {
+	  enable = true;
+	  servers = {
+	    tsserver.enable = true;
+	  };
+	};
+	cmp = {
+	  enable = true;
+	  autoEnableSources = true;
+	};
+      };
     };
   };
 
