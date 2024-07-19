@@ -31,7 +31,10 @@
         ga = "git add .";
         gc = "git commit";
         gp = "git push";
-        gacp = "ga && gc && gp";
+        gac = "ga && gc";
+	gacp = "ga && gc && gp";
+	gs = "git status";
+	gl = "git log --oneline";
         dots = "cd ~/.dotfiles && clear && ls -T && echo";
         editcf = "vi ~/.dotfiles/configuration.nix";
         edithm = "vi ~/.dotfiles/home.nix";
