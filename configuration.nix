@@ -1,13 +1,10 @@
-{ config, inputs, pkgs, ... }: 
+{ inputs, pkgs, ... }: 
 
 {
-  # package management
   environment.systemPackages = with pkgs; [
     github-cli
     home-manager
     nh
-
-    # rust rewrites
     bat
     delta
     dust
@@ -17,7 +14,6 @@
     ripgrep-all
     zellij
   ];
-
   programs = {
     # vscode server
     nix-ld = {
@@ -37,28 +33,25 @@
 	  enable = true;
 	  servers = {
 	    tsserver.enable = true;
+	    nixd.enable = true;
 	  };
 	};
 	cmp = {
 	  enable = true;
 	  autoEnableSources = true;
 	};
+	lualine.enable = true;
       };
-    };
+    }; 
   };
-
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users.will = import ./home.nix;
   };
-
-  # enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
   wsl = {
     enable = true;
     defaultUser = "will";
   };  
-
   system.stateVersion = "24.05";
 }

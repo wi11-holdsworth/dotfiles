@@ -15,7 +15,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixos-wsl, ... }@inputs: 
+  outputs = { nixpkgs, nixos-wsl, ... }@inputs: 
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -28,7 +28,7 @@
     {
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux"; # weird bug requires this to be here
+          system = system; # weird bug requires this to be here
           specialArgs = { inherit inputs; };
           modules = [
             ./configuration.nix

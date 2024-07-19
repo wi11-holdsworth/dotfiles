@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   home = {
@@ -16,10 +16,8 @@
       FLAKE = "/home/will/.dotfiles";
     };
   };
-
   programs = {
     home-manager.enable = true;
-
     bash = {
       enable = true;
       shellAliases = {
@@ -45,13 +43,11 @@
 	vim = "nvim";
       };
     };
-
     direnv = {
       enable = true;
       enableBashIntegration = true;
       nix-direnv.enable = true;
     };
-
     git = {
       enable = true;
       userName = "wi11-holdsworth";
@@ -62,7 +58,6 @@
       };
       delta.enable = true;
     };
-
     starship = {
       enable = true;
       settings = {
