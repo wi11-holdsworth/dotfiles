@@ -32,6 +32,7 @@
         gac = "ga && gc";
 	gacp = "ga && gc && gp";
 	gs = "git status";
+	gd = "git diff";
 	gl = "git log --oneline";
         dots = "cd ~/.dotfiles && clear && ls -T && echo";
         editcf = "vi ~/.dotfiles/configuration.nix";

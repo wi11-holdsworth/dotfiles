@@ -12,6 +12,7 @@
     fd
     gping
     ripgrep-all
+    ripgrep
     zellij
   ];
   programs = {
@@ -41,6 +42,8 @@
 	  autoEnableSources = true;
 	};
 	lualine.enable = true;
+	treesitter.enable = true;
+	
       };
     }; 
   };
