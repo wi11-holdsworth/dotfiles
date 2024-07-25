@@ -30,6 +30,18 @@
       };
       colorschemes.ayu.enable = true;
       plugins = {
+	cmp = {
+	  enable = true;
+	  autoEnableSources = true;
+	};
+	cmp-nvim-lsp.enable = true;
+	cmp_luasnip.enable = true;
+	cmp-treesitter.enable = true;
+	cmp-async-path.enable = true;
+	cmp-npm.enable = true;
+	cmp-emoji.enable = true;
+	cmp-dictionary.enable = true;
+	cmp-calc.enable = true;
 	lsp = {
 	  enable = true;
 	  servers = {
@@ -37,13 +49,9 @@
 	    nixd.enable = true;
 	  };
 	};
-	cmp = {
-	  enable = true;
-	  autoEnableSources = true;
-	};
 	lualine.enable = true;
+	luasnip.enable = true;
 	treesitter.enable = true;
-	
       };
     }; 
   };
