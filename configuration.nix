@@ -14,6 +14,7 @@
     ripgrep-all
     ripgrep
     zellij
+    wget
   ];
   programs = {
     # vscode server
