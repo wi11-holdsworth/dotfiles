@@ -28,6 +28,7 @@
         shiftwidth = 2;
       	number = true;
 	relativenumber = true;
+	autoindent = true;
       };
       colorschemes.ayu.enable = true;
       plugins = {
@@ -50,9 +51,12 @@
 	    nixd.enable = true;
 	  };
 	};
+	lsp-format.enable = true;
+	autoclose.enable = true;
 	lualine.enable = true;
 	luasnip.enable = true;
 	treesitter.enable = true;
+	lastplace.enable = true;
       };
     }; 
   };
