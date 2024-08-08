@@ -67,7 +67,10 @@
     extraSpecialArgs = {inherit inputs;};
     users.will = import ./home.nix;
   };
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix = {
+    optimise.automatic = true;
+    settings.experimental-features = ["nix-command" "flakes"];
+  };
   wsl = {
     enable = true;
     defaultUser = "will";
