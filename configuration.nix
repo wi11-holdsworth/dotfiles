@@ -29,6 +29,8 @@
       	number = true;
 	relativenumber = true;
 	autoindent = true;
+	tabstop = 2;
+	expandtab = true;
       };
       colorschemes.ayu.enable = true;
       plugins = {
