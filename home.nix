@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   home = {
     username = "will";
     homeDirectory = "/home/will";
@@ -21,8 +19,8 @@
     bash = {
       enable = true;
       shellAliases = {
-        nos = "nh os switch ~/.dotfiles"; 
-        ls = "eza --group-directories-first --icons"; 
+        nos = "nh os switch ~/.dotfiles";
+        ls = "eza --group-directories-first --icons";
         la = "ls -a";
         ll = "la -l";
         lt = "la -T";
@@ -30,18 +28,18 @@
         gc = "git commit";
         gp = "git push";
         gac = "ga && gc";
-	gacp = "ga && gc && gp";
-	gs = "git status";
-	gd = "git diff";
-	gl = "git log --oneline";
+        gacp = "ga && gc && gp";
+        gs = "git status";
+        gd = "git diff";
+        gl = "git log --oneline";
         dots = "cd ~/.dotfiles && clear && ls -T && echo";
         editcf = "vi ~/.dotfiles/configuration.nix";
         edithm = "vi ~/.dotfiles/home.nix";
-        getflakey = ''nix flake new -t github:nix-community/nix-direnv . 
-                        && echo "use flake" >> .envrc 
-                        && direnv allow'';
-	vi = "nvim";
-	vim = "nvim";
+        getflakey = ''          nix flake new -t github:nix-community/nix-direnv . 
+          && echo "use flake" >> .envrc 
+          && direnv allow'';
+        vi = "nvim";
+        vim = "nvim";
       };
     };
     direnv = {
@@ -54,8 +52,8 @@
       userName = "wi11-holdsworth";
       userEmail = "83637728+wi11-holdsworth@users.noreply.github.com";
       extraConfig = {
-	init.defaultBranch = "main";
-	core.editor = "nvim";
+        init.defaultBranch = "main";
+        core.editor = "nvim";
       };
       delta.enable = true;
     };
