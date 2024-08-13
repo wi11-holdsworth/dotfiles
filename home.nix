@@ -54,6 +54,7 @@
       extraConfig = {
         init.defaultBranch = "main";
         core.editor = "nvim";
+        push.autoSetupRemote = true;
         pull.rebase = false;
       };
       delta.enable = true;
