@@ -17,6 +17,7 @@
     ripgrep
     zellij
     wget
+    alejandra
   ];
   programs = {
     # vscode server
