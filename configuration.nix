@@ -28,7 +28,7 @@
     };
     nixvim = {
       enable = true;
-      options = {
+      opts = {
         shiftwidth = 2;
         number = true;
         relativenumber = true;
