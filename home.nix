@@ -56,6 +56,8 @@
         core.editor = "nvim";
         push.autoSetupRemote = true;
         pull.rebase = false;
+        gpg.program = "/mnt/c/Program Files (x86)/GnuPG/bin/gpg.exe";
+        commit.sign = true;
       };
       delta.enable = true;
     };
