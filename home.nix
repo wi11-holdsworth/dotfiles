@@ -40,6 +40,11 @@
           && direnv allow'';
         vi = "nvim";
         vim = "nvim";
+        dcub="docker compose up --build -d";
+        dcd="docker compose down";
+        dcdv="dcd -v";
+
+
       };
     };
     direnv = {
@@ -66,9 +71,9 @@
           success_symbol = "[➜](bold green) ";
           error_symbol = "[➜](bold red) ";
         };
-        add_newline = false;
+#        add_newline = false;
         cmd_duration.disabled = true;
-        line_break.disabled = true;
+#        line_break.disabled = true;
       };
     };
   };

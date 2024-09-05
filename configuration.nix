@@ -19,6 +19,7 @@
     wget
     alejandra
   ];
+  virtualisation.docker.enable = true;
   programs = {
     # vscode server
     nix-ld = {
@@ -64,6 +65,7 @@
       };
     };
   };
+  users.users.will.extraGroups = [ "docker" ];
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
     users.will = import ./home.nix;
