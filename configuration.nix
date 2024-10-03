@@ -18,6 +18,8 @@
     zellij
     wget
     alejandra
+    musikcube
+    spotdl
   ];
   virtualisation.docker.enable = true;
   programs = {

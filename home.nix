@@ -59,6 +59,7 @@
         core.editor = "nvim";
         push.autoSetupRemote = true;
         pull.rebase = false;
+        user.signingKey = "6FA0EF08A22DDFE1";
         gpg.program = "/mnt/c/Program Files (x86)/GnuPG/bin/gpg.exe";
         commit.sign = true;
       };
