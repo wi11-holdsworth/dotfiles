@@ -43,8 +43,6 @@
         dcub="docker compose up --build -d";
         dcd="docker compose down";
         dcdv="dcd -v";
-
-
       };
     };
     direnv = {
@@ -68,6 +66,7 @@
     };
     starship = {
       enable = true;
+      enableIonIntegration = true;
       settings = {
         character = {
           success_symbol = "[➜](bold green) ";
